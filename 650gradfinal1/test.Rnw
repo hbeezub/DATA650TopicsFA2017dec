@@ -1,0 +1,9 @@
+\documentclass{article}
+  
+  \begin{document}
+  
+  \title{Final Arithmetic Exam}
+  \author{Charles Redmond}
+  \maketitle
+3  +  8  = 
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{natbib}
+
+\begin{document}
+
+\title{My article}
+\author{hlb}
+\maketitle
+
+
+\section{atricle name}
+
+words words \citep{heidi} words
+
+\bibliographystyle{apa}
+\bibliography{1208}
+\nocite{*}
+
+\end{document}

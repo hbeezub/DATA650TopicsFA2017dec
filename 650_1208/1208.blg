@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 1208.aux
+The style file: apa.bst
+Database file #1: 1208.bib
+I was expecting a `,' or a `}'---line 2 of file 1208.bib
+ : 
+ : author={heidi},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author, editor, or key in heidi
+Warning--empty author and editor in heidi
+Warning--empty year in heidi
+Warning--empty title in heidi
+Warning--empty publisher in heidi
+(There was 1 error message)

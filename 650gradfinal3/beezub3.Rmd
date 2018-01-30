@@ -1,0 +1,61 @@
+---
+title: "dta650 final Q3"
+author: ""
+date: "December 14, 2017"
+output: html_document
+---
+
+Make a wordcloud2 for "Heart of Darkness" by Joseph Conrad.
+
+```{r}
+library(dplyr)
+library(gutenbergr)
+library(tidytext)
+library(tm)
+library(wordcloud)
+library(wordcloud2)
+library(stringr)
+```
+
+
+```{r}
+gutenberg_works(str_detect(title,'Heart of Darkness'))
+```
+
+id # 219
+
+```{r}
+heart<-gutenberg_download(219)
+heart
+```
+
+
+```{r}
+heart_words<-heart%>%
+  unnest_tokens(word,text)
+
+heart_words
+```
+
+
+```{r}
+hrt_words<-heart_words%>%
+  filter(!(word %in% stop_words$word))
+hrt_words
+```
+
+
+
+```{r}
+word_freq<-hrt_words%>%
+  group_by(word)%>%
+  summarize(count=n())
+
+```
+
+
+```{r}
+wordcloud2(word_freq)
+```
+
+

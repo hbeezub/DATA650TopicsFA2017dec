@@ -1,0 +1,28 @@
+\documentclass{article}
+  
+  \begin{document}
+  
+  \title{data650 Final Exam 1}
+  \author{Heidi Beezub (AKA President Cake)}
+  \maketitle
+  
+<<echo=FALSE>>=
+#cat('\\section{My Section}\n')
+x<-sample(1:10,1)
+y<-sample(1:10,1)
+sentence<-paste('x is ',x,'. y is ',y,'.\n',sep='')
+#cat(sentence,append=TRUE)
+
+
+
+@
+  
+<<exho=FALSE>>=
+
+cat('x is ',x,'. y is ',y,'.\n',sep='')
+@
+ 
+
+Here is text
+
+\end{document}

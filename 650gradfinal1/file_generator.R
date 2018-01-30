@@ -1,0 +1,5 @@
+cat('\\section{My Section}\n',file='example.Rnw')
+x<-sample(1:10,1)
+y<-sample(1:10,1)
+sentence<-paste('x is ',x,'. y is ',y,'.\n',sep='')
+cat(sentence,file='example.Rnw',append=TRUE)

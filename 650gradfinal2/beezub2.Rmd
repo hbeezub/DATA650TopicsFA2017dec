@@ -1,0 +1,67 @@
+---
+title: "Data 650 grad Final 2"
+author: "hbeezub"
+date: "December 14, 2017"
+output: html_document
+---
+
+
+Read in the file here: baseball greats. (read.csv('baseball_greats.csv',header=TRUE)) Take a look at the file. It contains homerun data for four great baseball players: Babe Ruth, Hank Aaron, Barry Bonds, and Willie Mays.
+
+
+```{r warning=FALSE,message=FALSE}
+library(dplyr)
+library(flexdashboard)
+library(ggplot2) 
+library(stringr)
+```
+
+
+
+```{r}
+hits<-read.csv('baseball_greats.csv',header=TRUE,stringsAsFactors=FALSE)
+hits
+```
+
+
+```{r}
+df<-hits%>%
+  group_by(playerID)%>%
+  select(yearID,HR)
+df
+  
+```
+
+
+```{r}
+ggplot()+
+  geom_line(data=df,aes(x=yearID,y=HR))
+  
+```
+
+
+
+```{r}
+aaron<-hits%>%
+  filter(playerID=='aaronha01')%>%
+  select(yearID,HR)
+aaron
+  
+```
+
+
+
+
+```{r}
+ggplot()+
+  geom_line(data=bonds, aes(x=yearID, y=HR),color='green')+
+  geom_line(data=bonds, aes(x=yearID, y=HR),color='orange')
+  
+
+
+```
+
+```{r}
+
+```
+
